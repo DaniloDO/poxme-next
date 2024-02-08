@@ -1,7 +1,7 @@
 
 export default function InfoBox(props: any) {
 
-    const { title, text, src} = props;
+    const { key, title, text, src } = props;
 
     return (
         <div className="mx-20 my-10 border rounded-3xl border-slate-500 flex transition ease-in-out delay-90 hover:bg-indigo-900 hover:scale-110">
@@ -10,8 +10,8 @@ export default function InfoBox(props: any) {
                 <img src={src} className="max-w-80 border border-transparent rounded-3xl my-7"/>
             </div>
             <ul className="gap-2 my-7 mx-7 list-disc text-slate-400 self-center">
-                {text.map((val: any) => {
-                    return <li className="mb-4 ml-7 max-w-md">{val}</li>
+                {text.map((val: any, index: number) => {
+                    return <li key={index} className="mb-4 ml-7 max-w-md">{val}</li>
                 })}
             </ul>
         </div>

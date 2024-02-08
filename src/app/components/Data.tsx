@@ -1,27 +1,40 @@
 
-const affiliateData = [
-    
-      "The NFT affiliation denotes a connection to the Proof of X project.",
-    
-      "It is a unique token used to claim rewards from the protocol.",
-    
-      "Each account holder in the project requires an affiliation as they are unique.",
+const infoBoxData = [
+
+    {
+        "id": 1,
+        "title": "Affiliate NFTs",
+        "src": "./images/Affiliate",
+        "text": [
         
-      "Affiliate NFTs are limited to 2,500 units and are distributed on a first-come, first-served basis."
-  ]
-
-  const membershipData = [
+            "The NFT affiliation denotes a connection to the Proof of X project.",
   
-      "The NFT membership signifies affiliation with the Proof of X project.",
-    
-      "It is a unique token used to access the project's features and benefits.",
-    
-      "Each account holder in the project requires a membership as they are distinct.",    
-    
-      "Given the nature of memberships, an infinite number can exist, with each representing a different account name."
-  ]
+            "It is a unique token used to claim rewards from the protocol.",
+          
+            "Each account holder in the project requires an affiliation as they are unique.",
+              
+            "Affiliate NFTs are limited to 2,500 units and are distributed on a first-come, first-served basis."
+        ]
+    },
 
-  const CollageData = [
+    {
+        "id": 2,
+        "title": "Membership NFTs",
+        "src": "./images/Membership",
+        "text": [
+        
+            "The NFT membership signifies affiliation with the Proof of X project.",
+    
+            "It is a unique token used to access the project's features and benefits.",
+          
+            "Each account holder in the project requires a membership as they are distinct.",    
+          
+            "Given the nature of memberships, an infinite number can exist, with each representing a different account name."
+        ]   
+    }
+]
+
+const CollageData = [
 
     {
         id: 1,
@@ -53,4 +66,4 @@ const affiliateData = [
 
 ]
 
-  export {affiliateData, membershipData, CollageData}
+  export {infoBoxData, CollageData}

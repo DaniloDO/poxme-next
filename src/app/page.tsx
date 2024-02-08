@@ -4,15 +4,23 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import InfoBox from "./components/InfoBox";
 import Card from "./components/Card";
-import { affiliateData, membershipData, CollageData } from "./components/Data"
+import { infoBoxData, CollageData } from "./components/Data"
+
 
 export default function Home() {
 
-  const card = CollageData.map((val) => {
+  const infoBox = infoBoxData.map((val: any) => {
     return (
-      <Card id={val.id} src={val.src} title={val.title} text={val.text} />
+      <InfoBox key={val.id} title={val.title} text={val.text} src={val.src} />
     )
   })
+
+  const card = CollageData.map((val: any) => {
+    return (
+      <Card key={val.id} src={val.src} title={val.title} text={val.text} />
+    )
+  })
+
 
   return (
     <div>
@@ -34,8 +42,7 @@ export default function Home() {
         <section>
           <div className="bg-slate-800 min-h-svh flex flex-col items-center">
             <div className="text-4xl font-semibold text-white my-20">Explore the POX.ME identity management system</div>
-            <InfoBox title={"Affiliate NFTs"} text={affiliateData} src="./images/Affiliate" />
-            <InfoBox title={"Membership NFTs"} text={membershipData} src="./images/Membership" />
+            {infoBox}
           </div>
         </section>
       </main>
